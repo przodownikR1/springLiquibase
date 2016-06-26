@@ -1,0 +1,7 @@
+app.log
+gc.log.0.current
+liqui.log
+/build
+/bin
+build
+bin
