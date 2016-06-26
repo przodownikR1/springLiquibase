@@ -1,7 +1,5 @@
-app.log
-gc.log.0.current
-liqui.log
-/build
-/bin
-build
 bin
+build
+app.log
+gc.log.0.current.log
+liqui.log
