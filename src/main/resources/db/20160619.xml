@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+         
+         <changeSet id="20160619" author="someUser2">
+		<comment>Comments table 2</comment>
+		<createTable tableName="COMMENT2">
+			<column name="ID_COMMENT" type="bigint">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="AUTHOR_NAME" type="varchar(10)">
+				<constraints nullable="false" />
+			</column>
+			<column name="USER_COMMENT" type="varchar(1000)">
+				<constraints nullable="false" />
+			</column>
+			<column name="CREATE_DATE" type="timestamp" />
+		</createTable>
+	</changeSet>
+</databaseChangeLog>

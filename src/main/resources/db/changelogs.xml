@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="przodownik (generated)" id="1466937174060-1">
+        <createTable tableName="COMMENT2">
+            <column name="ID_COMMENT" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTHOR_NAME" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_COMMENT" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-2">
+        <createTable tableName="COMMENT3">
+            <column name="ID_COMMENT" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTHOR_NAME" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_COMMENT" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+         
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-3">
+        <createTable tableName="product">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="product_name" type="VARCHAR(255)"/>
+            <column name="salary" type="DECIMAL(19, 2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-4">
+        <createTable tableName="t_sample">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="sign" type="CHAR(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-5">
+        <createTable tableName="userAddresses">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="address" type="TEXT"/>
+            <column name="country" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-6">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-7">
+        <addPrimaryKey columnNames="ID_COMMENT" constraintName="PRIMARY" tableName="COMMENT2"/>
+    </changeSet>
+    <changeSet author="przodownik (generated)" id="1466937174060-8">
+        <addPrimaryKey columnNames="ID_COMMENT" constraintName="PRIMARY" tableName="COMMENT3"/>
+    </changeSet>
+     <changeSet id="1466937174060-9" author="admin">
+       <sqlFile path="db/script/test.sql"/>
+   </changeSet>
+    <changeSet author="someone" id="1466937174060-10">
+        
+        <sql>
+            ALTER TABLE COMMENT2 MODIFY COLUMN USER_COMMENT VARCHAR(8196) DEFAULT NULL;
+        </sql>
+</changeSet>
+</databaseChangeLog>
