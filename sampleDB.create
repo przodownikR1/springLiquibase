@@ -1,0 +1,4 @@
+create schema sampleDB;
+CREATE USER 'sample'@'localhost' IDENTIFIED BY 'sample';
+GRANT ALL PRIVILEGES ON * . * TO 'sample'@'localhost';
+FLUSH PRIVILEGES;
